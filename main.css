@@ -1,0 +1,224 @@
+/* ------------------ Reset ------------------ */
+body {
+    display: block;
+    margin: 0px;
+}
+
+/* ============================================ */
+/* ------------------ Header ------------------ */
+/* ============================================ */
+
+.header {
+    height: 80px;
+    width: 100%;
+}
+
+div h1 {
+    font-size: 50px;
+    text-align: right;
+    padding: 10px;
+    animation-duration: 0.8s;
+    animation-name: slideIn;
+    animation-iteration-count: 1;
+
+}
+
+.navbar {
+    background-color: #555;
+    overflow: auto;
+    text-align: center;
+    /* If you want the text to be centered */
+    left: 25%;
+}
+
+/* ============================================ */
+/* -------------------- Nav ------------------- */
+/* ============================================ */
+.navbar a {
+    float: left;
+    padding: 1px 0px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    width: 25%;
+    /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+
+}
+
+.navbar a:hover {
+    background-color: #d6cece;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #4CAF50;
+}
+
+section {
+    height: 1000px;
+    width: 50%;
+    background-color: lightgrey;
+    animation: section-transition;
+    animation-duration: 3s;
+}
+
+
+/* -------------------------------------------- */
+/* ---------- Header Template  ---------- */
+/* -------------------------------------------- */
+
+.home {
+    /*    background-color: #8baa8b;*/
+    color: white;
+    background: linear-gradient(64deg, #ffffff, #000000);
+    background-size: 400% 400%;
+    animation: background-color-change 10s ease infinite;
+}
+
+.about {
+    /*    background-color: grey;*/
+    color: white;
+    background: linear-gradient(64deg, #a1cfc3, #e2abab);
+    background-size: 400% 400%;
+    animation: background-color-change 10s ease infinite;
+}
+
+
+.contact {
+    /*    background-color: #6eb1e2;*/
+    color: white;
+    background: linear-gradient(64deg, #00ffbc, #eba450);
+    background-size: 400% 400%;
+    animation: background-color-change 10s ease infinite;
+
+}
+
+.project {
+    /*    background-color: #efa0b8;*/
+/*    color: white;*/
+    color: white;
+    background: linear-gradient(64deg, #8853fd, #29aeea);
+    background-size: 400% 400%;
+    animation: background-color-change 10s ease infinite;
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 50%;
+        padding: 15px;
+        color: white;
+        margin-left: 30%;
+        transform: scaleX(0);
+    }
+
+    to {
+        opacity: 100%;
+        padding: 10px;
+        color: black;
+        margin-left: 0%;
+        transform: scaleX(1);
+    }
+}
+
+.header-height {
+    height: 80px;
+    width: 100%;
+    animation-duration: 1s;
+    animation-name: header-height-change;
+    animation-iteration-count: 1;
+    
+
+}
+@keyframes header-height-change {
+    0% {
+            height: 200px;
+
+    }
+    
+    100% {
+            height: 80px;
+
+    }
+}
+
+/*animation*/
+
+/*
+div h1 {
+    animation-duration: 2s;
+    animation-name: slideIn;
+    animation-iteration-count: 1;
+      animation-direction: alternate;
+}
+*/
+
+
+
+/*
+header div {
+    animation-duration: 2s;
+    animation-name: colorSlideIn;
+    animation-iteration-count: 1;
+}
+*/
+
+/*
+@keyframes c {
+    background: linear-gradient(to right, red 50%, blue 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+}
+*/
+
+
+
+@keyframes background-color-change {
+    0% {
+        
+        background-position: 0% 61%
+    }
+
+    50% {
+        background-position: 100% 40%
+    }
+
+    100% {
+        background-position: 0% 61%
+    }
+}
+
+@keyframes section-transition {
+    0% {
+        
+        width: 100%;
+        background-color: white;
+    }
+
+    50% {
+        
+    }
+
+    100% {
+        width: 50%;
+        background-color: lightgrey;
+    }
+}
+
+
+/*
+@keyframes colorSlideIn {
+    background: linear-gradient(to right, red 50%, blue 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+*/
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: left;
+        /* If you want the text to be left-aligned on small screens */
+    }
